@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.passmanager.client.ui.MainController">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="My Passwords" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="searchField" promptText="Search by website or username" 
+        style="-fx-pref-width: 300px; -fx-background-radius: 15;"/>
+
+    <TableView fx:id="passwordTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colWebsite" text="Website" prefWidth="150.0"/>
+            <TableColumn fx:id="colUsername" text="Username" prefWidth="150.0"/>
+            <TableColumn fx:id="colPassword" text="Password" prefWidth="150.0"/>
+        </columns>
+    </TableView> 
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Refresh" onAction="#handleRefresh"/>
+        <Button text="Copy Password" onAction="#handleCopy" style="-fx-background-color: #34495e; -fx-text-fill: white;"/>
+        <Button fx:id="addButton" id="addButton" text="Add New" onAction="#handleAddNew" />
+        <Button fx:id="deleteButton" id="deleteButton" text="Delete" onAction="#handleDelete" />
+    </HBox>
+
+</VBox>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" alignment="CENTER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.passmanager.client.ui.LoginController">
+    
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <Label text= "Master Access" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <Label text="Enter your Master Password to decrypt data" style="-fx-text-fill: #7f8c8d;"/>
+
+    <PasswordField fx:id="masterPasswordField" promptText="Master Password" 
+                   style="-fx-pref-width: 250px; -fx-padding: 10px;"/>
+
+    <Button fx:id="unlockButton" id="unlockButton" text="Unlock Vault" onAction="#handleLogin" />
+            
+    <Label fx:id="errorLabel" style="-fx-text-fill: #e74c3c;"/>
+</VBox>

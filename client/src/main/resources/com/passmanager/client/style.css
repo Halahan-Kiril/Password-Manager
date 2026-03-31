@@ -1,0 +1,82 @@
+/* Основной фон — теперь не черный, а темно-серый (Graphite) */
+.root {
+    -fx-base: #2b2d30;
+    -fx-background-color: #2b2d30;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Кнопки — делаем их спокойнее (Slate Blue) */
+.button {
+    -fx-background-color: #4e5d6c;
+    -fx-text-fill: #e0e0e0;
+    -fx-background-radius: 4;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #5d6d7e;
+}
+
+/* Специфический стиль для кнопки Unlock (сделаем её акцентной, но мягкой) */
+#unlockButton {
+    -fx-background-color: #346198; /* Спокойный зеленый */
+    -fx-text-fill: white;
+}
+#unlockButton:hover {
+    -fx-background-color: #2a4f7d;
+}
+
+/* --- ТАБЛИЦА: Убираем белые строки --- */
+.table-view {
+    -fx-background-color: #2b2d30; /* Основной фон таблицы */
+    -fx-border-color: #3b3e43;
+}
+
+/* Фон каждой заполненной строки */
+.table-row-cell {
+    -fx-background-color: #2b2d30; /* Тот же темный цвет, что и у окна */
+    -fx-text-fill: #dcdcdc;
+}
+
+/* Фон пустых строк (снизу таблицы) */
+.table-row-cell:empty {
+    -fx-background-color: #2b2d30;
+}
+
+/* Цвет строки при наведении мышкой */
+.table-row-cell:hover {
+    -fx-background-color: #35383d;
+}
+
+/* Цвет выделенной строки (делаем чуть светлее основного фона) */
+.table-row-cell:selected {
+    -fx-background-color: #3d4b5c;
+}
+
+/* Цвет текста в ячейках */
+.table-view .table-cell {
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: transparent; /* Убираем сетку между ячейками */
+}
+
+/* Кнопка Add New (Спокойный, но сочный темно-зеленый) */
+#addButton {
+    -fx-background-color: #2f6d51; /* Более живой лесной цвет */
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 5;
+}
+#addButton:hover {
+    -fx-background-color: #367a5c; /* Светлеет при наведении */
+}
+
+/* Кнопка Delete (Приглушенный, но выразительный красный) */
+#deleteButton {
+    -fx-background-color: #813939; /* Кирпично-красный, приятный глазу */
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 5;
+}
+#deleteButton:hover {
+    -fx-background-color: #a24e4e; /* Светлеет при наведении */
+}
+
